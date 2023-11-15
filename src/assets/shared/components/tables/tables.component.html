@@ -1,0 +1,183 @@
+
+    <form>
+
+        <!--START::ROW-->
+        <div class="row g-8 pb-5">
+          <div class="col-xxl-12">
+            <div class="row g-8">
+              <div class="col-lg-3">
+                <label for="searchFirstName" class="form-label text-uppercase">First Name</label>
+                <input id="searchFirstName" type="text" class="form-control" name="searchFirstName" placeholder="First Name">
+              </div>
+
+              <div class="col-lg-3">
+                <label for="searchLastName" class="form-label text-uppercase">Last Name</label>
+                <input id="searchLastName" type="text" class="form-control" name="searchLastName" placeholder="Last Name">
+              </div>
+              
+              <div class="col-lg-3 fv-row">
+                <label for="searchDOB" class="form-label text-uppercase">DOB</label>
+                <input id="searchDOB" name="searchDOB" class="form-control" type="date" placeholder="MM/DD/YYYY">
+              </div>
+              
+              <div class="col-lg-3">
+                <label for="searchAge" class="form-label text-uppercase">Age</label>
+                <input id="searchAge" name="searchAge" class="form-control" placeholder="Approximate Age" maxlength="3">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END::ROW-->
+
+        <!--START::ROW-->
+        <div class="row g-8 pb-5">
+          <div class="col-xxl-12">
+            <div class="row g-8">
+              <div class="col-lg-3">
+                <label for="searchPersonFACSID" class="form-label text-uppercase">Person/FACS ID</label>
+                <input id="searchPersonFACSID" name="searchPersonFACSID" type="text" class="form-control" placeholder="Person/FACS ID">
+              </div>
+
+              <div class="col-lg-3">
+                <label for="searchStateID" class="form-label text-uppercase">State ID</label>
+                <input id="searchStateID" name="searchStateID" type="text" class="form-control" placeholder="State ID" maxlength="7">
+              </div>
+              
+              <div class="col-lg-3">
+                <label for="searchSSN" class="form-label text-uppercase">SSN</label>
+                <input id="searchSSN" name="searchSSN" class="form-control" placeholder="XXX-XX-XXXX" maxlength="9">
+              </div>
+
+              <div class="col-lg-3">
+                <label for="searchCaseID" class="form-label text-uppercase">Case ID</label>
+                <input id="searchCaseID" name="searchCaseID" type="text" class="form-control" placeholder="Case ID">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END::ROW-->
+
+        <!--START::ROW-->
+        <div class="row g-8 pb-5">
+          <div class="col-xxl-12">
+            <div class="row g-8">
+              <div class="col-lg-4">
+                <label for="searchAddress" class="form-label text-uppercase">Address</label>
+                <input id="searchAddress" name="searchAddress" type="text" class="form-control" placeholder="Address or PO Box">
+              </div>
+              
+              <div class="col-lg-4">
+                <label for="searchState" class="form-label text-uppercase">State</label>
+                <select id="searchState" name="searchState" class="form-select select2-hidden-accessible" data-control="select2" data-placeholder="Select State" data-select2-id="select2-data-searchState" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
+                  <option data-select2-id="select2-data-2-hldh">Select State</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                </select>
+              </div>
+
+              <div class="col-lg-4">
+                <label for="searchCity" class="form-label text-uppercase">City</label>
+                <select id="searchCity" name="searchCity" class="form-select select2-hidden-accessible" data-control="select2" data-placeholder="Select City" data-select2-id="select2-data-searchCity" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
+                  <option data-select2-id="select2-data-4-pji9">Select City</option>
+                  <option value="Adel">Adel</option>
+                  <option value="Albia">Albia</option>
+                  <option value="Algona">Algona</option>
+                  <option value="Allison">Allison</option>
+                  <option value="Anamosa">Anamosa</option>
+                  <option value="Atlantic">Atlantic</option>
+                  <option value="Audubon">Audubon</option>
+                  <option value="Boone">Boone</option>
+                  <option value="Burlington">Burlington</option>
+                  <option value="Cedar Rapids">Cedar Rapids</option>
+                  <option value="Clinton">Clinton</option>
+                  <option value="Davenport">Davenport</option>
+                  <option value="Des Moines">Des Moines</option>
+                  <option value="Dubuque">Dubuque</option>
+                  <option value="Eldora">Eldora</option>
+                  <option value="Grundy Center">Grundy Center</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END::ROW-->
+
+
+        <!--START::ROW-->
+        <!--<div class="row g-8 pb-5">
+          <div class="col-xxl-12">
+            <div class="row g-8">
+              <div class="col-lg-10">
+                <label class="d-flex flex-stack mb-5 cursor-pointer">
+                  <span class="d-flex align-items-center me-2">
+                    <span class="d-flex flex-column">
+                      <span class="fw-bold fs-6 text-gray-800">Which Database would you like to search?</span>
+                      <span class="fs-7 text-gray-600">You can select one or both.</span>
+                    </span>
+                  </span>
+
+                  <span class="form-check form-check-custom form-check-solid">
+                    <input id="searchVisionDBckbox" class="form-check-input h-20px w-20px" type="checkbox" value="VISION_DB" checked>
+
+                    <label for="searchVisionDBckbox" class="form-check-label">VISION DB</label>
+                  </span>
+
+                  <span class="form-check form-check-custom form-check-solid">
+                    <input id="searchDHSDBckbox" class="form-check-input h-20px w-20px" type="checkbox" value="DHS_DB">
+
+                    <label for="searchDHSDBckbox" class="form-check-label">DHS DB</label>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        <!--END::ROW-->
+
+        <div class="d-flex justify-content-end gap-2 gap-lg-3">
+          <!--RESET-->
+          <!--a class="btn btn-sm btn-bg-secondary text-uppercase" href="#">Cancel</a-->
+
+          <!--SEARCH-->
+          <!-- <a href="#alert_person_notfound" class="btn btn-sm btn-dark text-uppercase">Search</a> -->
+
+          <!--START::ALERT-NO PERSON FOUND-->
+          <div id="alert_person_notfound" class="alert alert-danger alert-dismissible bg-light-danger pt-sans d-flex flex-center flex-column py-10 px-10 px-lg-20 mb-10 d-none" role="alert">
+            <button type="button" class="position-absolute top-0 end-0 m-2 btn btn-icon btn-icon-danger" data-bs-dismiss="alert">
+              <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+            </button>
+
+            <i class="ki-duotone ki-information-5 fs-5tx text-danger mb-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+
+            <div class="text-center">
+              <h1 class="fw-bold mb-5">Person Not Found</h1>
+
+              <div class="separator separator-dashed border-danger opacity-25 mb-5"></div>
+
+              <div class="mb-9 text-dark">
+                Refine your Search Criteria or Add Person.
+              </div>
+
+              <div class="d-flex flex-center flex-wrap">
+                <a href="#" class="btn btn-outline btn-outline-danger btn-active-danger m-2">Clear</a>
+                <a href="#" class="btn btn-sm btn-dark align-self-center text-uppercase" data-bs-toggle="modal" data-bs-target="#kt_modal_new_person">Add Person</a>
+              </div>
+            </div>
+          </div>
+          <!--END::ALERT-NO PERSON FOUND-->
+        </div>
+    </form>

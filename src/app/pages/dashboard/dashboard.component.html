@@ -1,0 +1,33 @@
+<!--begin::Row-->
+<div class="row g-5 g-xl-10 mb-3">
+  <div class="col-12">
+    <vision-card
+      [titleIcon]=""
+      [cardTitle]="'Total Cases'"
+      [cardSubTitle]="''"
+      [showHeaderBtns]="false"
+      [showFooterBtns]="false"
+      [ftr_btn_alignment]="">
+      Total Cases
+    </vision-card>
+  </div>
+</div>
+
+<div class="row g-5 g-xl-10 mb-5 mb-xl-10 d-flex">
+  <div class="col-12 col-lg-8 mb-md-5 mb-xl-10 order-1">
+    <vision-card>
+      <vision-calendar></vision-calendar>
+    </vision-card>
+  </div>
+  <div class="col-12 col-lg-4 mb-md-5 mb-xl-10 order-lg-1">
+    <vision-to-do></vision-to-do>
+  </div>
+</div>
+
+<!-- begin:: Modal example -->
+<!-- <app-modal #modal [modalConfig]="modalConfig">
+  Modal body html
+</app-modal>
+<button class="btn btn-primary" (click)="openModal()">Open modal</button> -->
+<!-- Note: Don't forget import ModalsModule (from _metronic/partials) into your module -->
+<!-- end:: Modal example -->

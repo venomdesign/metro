@@ -1,0 +1,87 @@
+<div class="card shadow-sm mb-5">
+    <div class="card-header">
+        <h2 class="card-title flex-fill justify-content-between">
+            <div class="d-flex flex-column my-4">
+                <span class="d-flex flex-row align-items-center
+                "><!--img _ngcontent-huh-c237="" src="../../../../assets/media/svg/case-management/calendar-icon.svg" alt="To-Do Icon" class="symbol symbol-30px me-1" height="30" eidth="30"--> {{ cardTitle }}</span>
+                <span class="card-text text-gray-700 fw-semibold fs-5 mt-1 mb-0">{{ cardSubTitle }}</span>
+            </div>
+            <ng-container *ngIf="showHeaderBtns">
+                <vision-button 
+                        [color]="'warning'" 
+                        [label]="'Add Event'" 
+                        [ariaLabel]="'Click here to Add Event'" 
+                        [leftIcon]="''" 
+                        [rightIcon]="''"
+                        [size]="'sm'"
+                        (onClick)="buttonClicked()">
+                </vision-button>
+            </ng-container>
+        </h2>
+    </div>
+    <!-- <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> -->
+    <div class="card-body">
+        <ng-content></ng-content>
+    </div>
+    <div class="card-footer" *ngIf="showFooterBtns" [ngClass]="'justify-content-'+ftr_btn_alignment">
+        <div class="d-flex justify-content-between w-100">
+            <div class="d-flex gap-2">
+                <!-- <vision-button 
+                    [color]="'secondary me-2'" 
+                    [label]="'Cancel'" 
+                    [ariaLabel]="'Click here to Cancel'" 
+                    [leftIcon]="''" 
+                    [rightIcon]="''"
+                    [size]="'sm'"
+                    (onClick)="buttonClicked()">
+                </vision-button>
+                <vision-button 
+                    [color]="'primary'" 
+                    [label]="'Search'" 
+                    [ariaLabel]="'Click here to Add Person'" 
+                    [leftIcon]="''" 
+                    [rightIcon]="''"
+                    [size]="'sm'"
+                    (onClick)="buttonClicked()">
+                </vision-button> -->
+            </div>
+            <div class="d-flex gap-2">
+                <!-- <vision-button 
+                    [color]="'secondary me-2'" 
+                    [label]="'Cancel'" 
+                    [ariaLabel]="'Click here to Cancel'" 
+                    [leftIcon]="''" 
+                    [rightIcon]="''"
+                    [size]="'sm'"
+                    (onClick)="buttonClicked()">
+                </vision-button> -->
+                <vision-button 
+                    [color]="'primary'" 
+                    [label]="'Search'" 
+                    [ariaLabel]="'Click here to Add Person'" 
+                    [leftIcon]="''" 
+                    [rightIcon]="''"
+                    [size]="'sm'"
+                    (onClick)="buttonClicked()">
+                </vision-button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- begin:: Modal example -->
+<!-- <app-modal #modal [modalConfig]="modalConfig">
+    Modal body html
+  </app-modal>
+  <button class="btn btn-primary" (click)="buttonClicked()">Open modal</button> -->
+  <!-- Note: Don't forget import ModalsModule (from _metronic/partials) into your module -->
+  <!-- end:: Modal example -->

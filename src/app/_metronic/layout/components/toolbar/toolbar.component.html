@@ -1,0 +1,213 @@
+<!--begin::Toolbar container-->
+<div id="kt_app_toolbar_container" class="app-container" [ngClass]="appToolbarContainerCSSClass">
+  <ng-container *ngIf="showPageTitle()">
+    <app-page-title [appPageTitleDirection]="appPageTitleDirection" [appPageTitleBreadcrumb]="appPageTitleBreadcrumb"
+      [appPageTitleDescription]="appPageTitleDescription" class="page-title d-flex flex-wrap me-3"
+      [ngClass]="{'flex-column justify-content-center': appPageTitleDirection === 'column', 'align-items-center': appPageTitleDirection !== 'column', appPageTitleCSSClass}">
+    </app-page-title>
+  </ng-container>
+
+  <vision-button 
+    [color]="'primary'" 
+    [label]="'Add Person'" 
+    [ariaLabel]="'Click here to Add Person'" 
+    [leftIcon]="''" 
+    [rightIcon]="''"
+    [size]="'sm'"
+    (click)="open()">
+  </vision-button>
+</div>
+<!--end::Toolbar container-->
+
+<!-- end:: Modal example -->
+<app-modal #modal [modalConfig]="modalConfig" [modalSize]="'lg'" [buttonAlignment]="'center'">
+  <form class="form" action="#" id="kt_modal_new_person_form">
+    <div class="modal-body py-10 px-lg-15">
+      <div class="scroll-y me-n7 pe-7" id="kt_modal_new_person_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_new_person_header" data-kt-scroll-wrappers="#kt_modal_new_person_scroll" data-kt-scroll-offset="400px" style="max-height: 541px;">
+        
+        <div class="row mb-5 fv-row">
+          <div class="col-md-3 fv-row mb-2">
+            <label for="newPersonFirstName" class="form-label text-uppercase required">First Name</label>
+            <input id="newPersonFirstName" name="newPersonFirstName" type="text" class="form-control" placeholder="First Name" required="">
+            
+            <div class="fv-plugins-message-container invalid-feedback"></div>
+          </div>
+          
+          <div class="col-md-3 fv-row mb-2">
+            <label for="newPersonMiddleName" class="form-label text-uppercase">Middle Name</label>
+            <input id="newPersonMiddleName" name="newPersonMiddleName" type="text" class="form-control" placeholder="Last Name">
+          </div>
+
+          <div class="col-md-3 fv-row mb-2">
+            <label for="newPersonLastName" class="form-label text-uppercase required">Last Name</label>
+            <input id="newPersonLastName" name="newPersonLastName" type="text" class="form-control" placeholder="Last Name" required="">
+            
+            <div class="fv-plugins-message-container invalid-feedback"></div>
+          </div>
+          
+          <div class="col-md-3 fv-row">
+            <label for="newPersonSuffix" class="form-label text-uppercase">Suffix</label>
+            <input id="newPersonSuffix" name="newPersonSuffix" type="text" class="form-control" placeholder="Suffix">
+          </div>
+        </div>
+        
+        <div class="row mb-5 fv-row">
+          <div class="col-md-6 fv-row mb-2">
+            <label for="newPersonMaidenName" class="form-label text-uppercase">Maiden Name</label>
+            <input id="newPersonMaidenName" name="newPersonMaidenName" type="text" class="form-control" placeholder="Maiden Name">
+          </div>
+          
+          <div class="col-md-6 fv-row">
+            <label for="newPersonPreferredName" class="form-label text-uppercase">Preferred Name</label>
+            <input id="newPersonPreferredName" name="newPersonPreferredName" type="text" class="form-control" placeholder="Preferred Name">
+          </div>
+        </div>
+        
+        <div class="row mb-5 fv-row">
+          <div class="col-md-6 fv-row mb-2">
+            <label for="newPersonSSN" class="form-label text-uppercase">Social Security Number</label>
+            <input id="newPersonSSN" name="newPersonSSN" type="text" class="form-control" placeholder="Social Security Number">
+          </div>
+          
+          <div class="col-md-6 fv-row">
+            <label for="newPersonResCounty" class="form-label text-uppercase">Residence County</label>
+            <select id="newPersonResCounty" name="newPersonResCounty" class="form-select select2-hidden-accessible" data-control="select2" data-placeholder="Select Residence County" data-select2-id="select2-data-newPersonResCounty" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
+              <option data-select2-id="select2-data-6-y3p3"></option>
+              <option value="1">Black Hawk</option>
+              <option value="2">Cedar</option>
+              <option value="3">Fayette</option>
+              <option value="4">Iowa</option>
+              <option value="5">Polk</option>
+              <option value="6">Warren</option>
+            </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-5-gp90" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-newPersonResCounty-container" aria-controls="select2-newPersonResCounty-container"><span class="select2-selection__rendered" id="select2-newPersonResCounty-container" role="textbox" aria-readonly="true" title="Select Residence County"><span class="select2-selection__placeholder">Select Residence County</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>	
+          </div>
+        </div>
+        
+        <div class="row fv-row">
+          <div class="col-md-4 fv-row mb-2">
+            <label for="newPersonDOB" class="form-label text-uppercase">Date of Birth</label>
+            <input id="newPersonDOB" name="newPersonDOB" class="form-control" type="date" placeholder="MM/DD/YYYY">
+          </div>
+          
+          <div class="col-md-4 fv-row mb-2">
+            <label for="newPersonAge" class="form-label text-uppercase">Age</label>
+            <input id="newPersonAge" name="newPersonAge" type="text" class="form-control" placeholder="Person's Age">
+          </div>
+          
+          <div class="col-md-4 fv-row">
+            <label for="newPersonDD" class="form-label text-uppercase">Deceased Date</label>
+            <input id="newPersonDD" name="newPersonDD" class="form-control" type="date" placeholder="MM/DD/YYYY">
+          </div>
+        </div>
+
+        <!--<div class="row mb-5 fv-row">
+          <div class="col-md-6 fv-row mb-2">
+            <div class="fv-row mb-5 me-5">
+              <fieldset>
+                <legend class="form-label text-uppercase">Professional?
+                <i class="fa-solid fa-circle-info ms-1 fs-7" data-bs-toggle="tooltip" title="Person may have different roles in VISION."></i></legend>
+
+
+                <div class="d-flex">
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonProfessional-no" name="newPersonProfessional" class="form-check-input" type="radio" value="No">
+                    <label for="newPersonProfessional-no" class="form-check-label">No</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonProfessional-yes" name="newPersonProfessional" class="form-check-input" type="radio" value="Yes">
+                    <label for="newPersonProfessional-yes" class="form-check-label">Yes</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid">
+                    <input id="newPersonProfessional-unknown" name="newPersonProfessional" class="form-check-input" type="radio" value="Unknown">
+                    <label for="newPersonProfessional-unknown" class="form-check-label">Unknown</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="col-md-6 fv-row">
+            <div class="fv-row mb-5 me-5">
+              <fieldset>
+                <legend class="form-label text-uppercase">Supervise Visits?
+                <i class="fa-solid fa-circle-info ms-1 fs-7" data-bs-toggle="tooltip" title="Can this person Supervise Visits."></i></legend>
+
+
+                <div class="d-flex">
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonSupervisedVisits-no" name="newPersonSupervisedVisits" class="form-check-input" type="radio" value="No">
+                    <label for="newPersonSupervisedVisits-no" class="form-check-label">No</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonSupervisedVisits-yes" name="newPersonSupervisedVisits" class="form-check-input" type="radio" value="Yes">
+                    <label for="newPersonSupervisedVisits-yes" class="form-check-label">Yes</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid">
+                    <input id="newPersonSupervisedVisits-unknown" name="newPersonSupervisedVisits" class="form-check-input" type="radio" value="Unknown">
+                    <label for="newPersonSupervisedVisits-unknown" class="form-check-label">Unknown</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>-->
+        
+        <!--<div class="row mb-5 fv-row">
+          <div class="col-md-6 fv-row mb-2">
+            <div class="fv-row me-5">
+              <fieldset>
+                <legend class="form-label text-uppercase">Approved Caretaker?
+                <i class="fa-solid fa-circle-info ms-1 fs-7" data-bs-toggle="tooltip" title="Person approved by The State of Iowa Health and Human Services."></i></legend>
+
+
+                <div class="d-flex">
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonApprovedCaretaker-no" name="newPersonApprovedCaretaker" class="form-check-input" type="radio" value="No">
+                    <label for="newPersonApprovedCaretaker-no" class="form-check-label">No</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid me-5">
+                    <input id="newPersonApprovedCaretaker-yes" name="newPersonApprovedCaretaker" class="form-check-input" type="radio" value="Yes">
+                    <label for="newPersonApprovedCaretaker-yes" class="form-check-label">Yes</label>
+                  </div>
+
+                  <div class="form-check form-check-custom form-check-solid">
+                    <input id="newPersonApprovedCaretaker-unknown" name="newPersonApprovedCaretaker" class="form-check-input" type="radio" value="Unknown">
+                    <label for="newPersonApprovedCaretaker-unknown" class="form-check-label">Unknown</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          
+          <div class="col-md-6 fv-row">
+            <div class="fv-row">
+              <label for="newPersonNotApprovedCaretaker" class="form-label text-uppercase">Reason Not Approved
+              <i class="fa-solid fa-circle-info ms-1 fs-7" data-bs-toggle="tooltip" title="Reason only applies if Person selected No as an Approved Caretaker."></i></label>
+              <input id="newPersonNotApprovedCaretaker" name="newPersonNotApprovedCaretaker" type="text" class="form-control" placeholder="Provide Not Approved Reason">
+
+              <div class="fv-plugins-message-container invalid-feedback"></div>
+            </div>
+          </div>
+        </div>-->
+
+      </div>
+    </div>
+
+    <!-- <div class="modal-footer flex-center">
+      <button type="reset" id="kt_modal_new_person_cancel" class="btn btn-sm btn-light align-self-center text-uppercase me-3">Cancel</button>
+
+      <button type="submit" id="kt_modal_new_person_submit" class="btn btn-sm btn-dark align-self-center text-uppercase">
+        <span class="indicator-label">Save</span>
+        <span class="indicator-progress">Please wait...
+        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+      </button>
+    </div> -->
+
+  </form>
+</app-modal>
+

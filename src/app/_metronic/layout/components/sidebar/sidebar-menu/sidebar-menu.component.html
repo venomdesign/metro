@@ -1,0 +1,134 @@
+<!--begin::Menu wrapper-->
+<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true"
+  data-kt-scroll-activate="true" data-kt-scroll-height="auto"
+  data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
+  data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
+  <!--begin::Menu-->
+  <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true"
+    data-kt-menu-expand="false">
+     <!-- SEARCH/CASE SEARCH -->
+     <div class="menu-item">
+      <a class="menu-link without-sub" routerLink="/" routerLinkActive="active"><span class="menu-icon">
+          <i class="bi bi-search"></i>
+        </span><span class="menu-title text-uppercase" translate="MENU.SEARCH"></span></a>
+    </div>
+
+    <!-- DASHBOARDS -->
+    <div class="menu-item menu-accordion" data-kt-menu-trigger="click" routerLinkActive="here show">
+      <span class="menu-link"><span class="menu-icon"><i class="fa-solid fa-chart-pie"></i></span><span
+          class="menu-title text-uppercase" data-link="/dashboard" translate="MENU.DASHBOARD.TITLE"></span><span class="menu-arrow"></span></span><!-- routerLink="/dashboard" routerLinkActive="active" -->
+      <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+        <div class="menu-item ms-5">
+          <a class="menu-link without-sub" routerLink="/dashboard" routerLinkActive="active"><span class="menu-title" data-link="/dashboard/cpw">CPW</span></a>
+        </div>
+        <div class="menu-item ms-5">
+          <a class="menu-link without-sub" routerLink="/dashboard" routerLinkActive="active"><span class="menu-title" data-link="/dashboard/swcm">SWCM</span></a>
+        </div>
+        <div class="menu-item ms-5">
+          <a class="menu-link without-sub" routerLink="/dashboard" routerLinkActive="active"><span class="menu-title" data-link="/dashboard/supervisor">Supervisor</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE DETAILS -->
+    <div class="menu-item menu-accordion" data-kt-menu-trigger="click" routerLinkActive="here show">
+      <span class="menu-link"><span class="menu-icon"><i class="bi bi-folder2-open"></i></span><span class="menu-title text-uppercase"
+          data-link="/case">Case Details</span><span class="menu-arrow"></span></span>
+      <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Overview</span></a>
+        </div>
+        <div class="menu-item menu-accordion" routerLinkActive="here show" data-kt-menu-trigger="click">
+          <span class="menu-link"><span
+              class="menu-title" data-link="/case">Case Association</span><span
+              class="menu-arrow"></span></span>
+
+          <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+            <div class="menu-item">
+              <a class="menu-link without-sub" routerLinkActive="active"
+                routerLink="/case-details/associations/members"><span class="menu-title">Case Members</span></a>
+            </div>
+            <div class="menu-item">
+              <a class="menu-link without-sub" routerLinkActive="active"
+                routerLink="/case-details/associations/relatives"><span class="menu-title">Relatives</span></a>
+            </div>
+            <div class="menu-item">
+              <a class="menu-link without-sub" routerLinkActive="active"
+                routerLink="/case-details/associations/support"><span class="menu-title">Family Supports</span></a>
+            </div>
+            <div class="menu-item">
+              <a class="menu-link without-sub" routerLinkActive="active"
+                routerLink="/case-details/associations/professionals"><span class="menu-title">Professionals</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Health</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Education/Income</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Court</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Notes</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Documents</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Services/Arrangements</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLinkActive="active" routerLink="/error/404"><span
+              class="menu-title">Timeline</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSON DETAILS -->
+    <div class="menu-item menu-accordion" data-kt-menu-trigger="click" routerLinkActive="here show">
+      <span class="menu-link"><span class="menu-icon"><i class="bi bi-person-circle"></i></span><span class="menu-title text-uppercase"
+          data-link="/person">Person Details</span><span class="menu-arrow"></span></span>
+      <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Overview</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Demographics</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Relationships</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Health</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Education/Income</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Court</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Notes</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Documents</span></a>
+        </div>
+        <div class="menu-item">
+          <a class="menu-link without-sub" routerLink="/error/404" routerLinkActive="active"><span class="menu-title">Services/Arrangements</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end::Menu-->
+</div>
+<!--end::Menu wrapper-->

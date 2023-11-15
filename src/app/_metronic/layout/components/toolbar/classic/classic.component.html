@@ -1,0 +1,73 @@
+<ng-container *ngIf="appToolbarFilterButton">
+  <!--begin::Filter menu-->
+  <div class="m-0">
+    <!--begin::Menu toggle-->
+    <!-- <a href="#" class="btn btn-sm btn-flex fw-bold" [ngClass]="daterangepickerButtonClass" data-kt-menu-trigger="click"
+      data-kt-menu-placement="bottom-end">
+      <span [inlineSVG]="'./assets/media/icons/duotune/general/gen031.svg'"
+        class="svg-icon svg-icon-6 svg-icon-muted me-1"></span>
+      Filter
+    </a> -->
+    <!--end::Menu toggle-->
+
+    <app-dropdown-menu1></app-dropdown-menu1>
+  </div>
+  <!--end::Filter menu-->
+</ng-container>
+
+<ng-container *ngIf="appToolbarDaterangepickerButton">
+  <div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left"
+    class="btn btn-sm fw-bold  d-flex align-items-center px-4" [ngClass]="daterangepickerButtonClass">
+    <!--begin::Display range-->
+    <div class="text-gray-600 fw-bold">
+      Loading date range...
+    </div>
+    <!--end::Display range-->
+    <span [inlineSVG]="'./assets/media/icons/duotune/general/gen014.svg'" class="svg-icon svg-icon-1 ms-2 me-0"></span>
+  </div>
+</ng-container>
+
+<!--begin::Secondary button-->
+<!-- <a href="#" class="btn btn-sm btn-flex btn-light fw-bold">
+  Filter
+</a> -->
+<!--end::Secondary button-->
+
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-sm btn-primary text-uppercase" data-toggle="modal" data-target="#modal_add-person">
+  <span translate="BUTTONS.ADD_PERSON"></span>
+</button>
+
+<vision-button 
+  [color]="'primary'" 
+  [label]="'Add Person'" 
+  [ariaLabel]="'Click here to Add Person'" 
+  [leftIcon]="''" 
+  [rightIcon]="''"
+  onClick="buttonClicked()"
+  [size]="'sm'">
+</vision-button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="modal_add-person" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!--end::Primary button-->

@@ -1,0 +1,28 @@
+$primary: #1c365f; //#009ef7;
+
+.card {
+    $c: &; // The class name is in a variable now
+    
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        min-height: 70px;
+        padding: 0 2.25rem;
+        color: var(--kt-card-cap-color);
+        background-color: var(--kt-card-cap-bg);
+        border-bottom: 1px solid var(--kt-card-border-color);
+
+        &:first-child { 
+            border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+        }
+    }
+
+    &-body {
+        #{$c}-title { color: $primary; font-family: var(--font-ptsans); font-size: 1.35rem!important; font-weight: 700 !important; }
+        #{$c}-text { color: purple; }
+    }
+    
+    &-footer { display: flex; }
+}

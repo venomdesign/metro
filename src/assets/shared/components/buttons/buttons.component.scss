@@ -1,0 +1,93 @@
+// $white: #fff;
+// $primary: #1c365f;
+
+
+// .btn {
+//     box-sizing: border-box;
+//     border: 1px solid transparent !important;
+//     border-radius: 4px;
+//     text-transform: uppercase;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     &-primary { 
+//         color: $white;
+//         background: $primary;
+    
+//         &:hover {
+//             border: 1px solid $primary !important;
+//             color: $primary !important;
+//             background: $white !important;
+//         }
+//     }
+//     &-secondary { 
+//         color: var(---color-secondary);
+//         background: $white;
+//         border: 1px solid var(--color-secondary);
+    
+//         &:hover {
+//             border: 1px solid var(--color-secondary);
+//             color: $white;
+//             background: var(--color-secondary);
+//         }
+//     }
+//     &-text { 
+//         color: $primary;
+//         //background: $primary;
+    
+//         &:hover {
+//             border: 1px solid $primary;
+//             color: $primary;
+//             //background: $white;
+//         }
+//     }
+//     &-info { 
+//         color: $primary;
+//         background: var(--color-info);
+    
+//         &:hover {
+//             border: 1px solid var(--color-info);
+//             color: $primary;
+//             background: $white;
+//         }
+//     }
+//     &-success { 
+//         color: $white;
+//         background: var(--color-success);
+    
+//         &:hover {
+//             border: 1px solid var(--color-success);
+//             color: var(--color-success);
+//             background-color: rgba(var(--color-success), 0.5);
+//         }
+//     }
+//     &-warning { 
+//         color: var(--color-black);
+//         background: var(--color-warning);
+    
+//         &:hover {
+//             border: 1px solid var(--color-warning);
+//             color: var(--color-black);
+//             background: $white;
+//         }
+//     }
+//     &-error { 
+//         color: $white;
+//         background: var(--color-error);
+    
+//         &:hover {
+//             border: 1px solid var(--color-error);
+//             color: var(--color-error);
+//             background: $white;
+//         }
+//     }
+//     &:disabled { 
+//         color: var(--color-disabled-text);
+//         background: var(--color-disabled);
+//         cursor: not-allowed;
+//     }
+
+//     &.small { padding: 0.188em 1rem; } // 32px height
+//     &.large { padding: 0.4379em 1rem; } // 40px height 
+// }

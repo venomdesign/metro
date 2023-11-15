@@ -1,0 +1,15 @@
+//
+// Reboot
+//
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--kt-headings-color);
+	outline: 0;
+	font-family: $font-family-pt-sans !important;
+
+	&.page-heading {
+		font-family: $font-family-gill-sans !important;
+		font-size: 1.5rem!important;
+		text-transform: uppercase;
+	}
+}
