@@ -1,6 +1,6 @@
 {
-  "name": "demo1",
-  "version": "8.1.6",
+  "name": "vision",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",

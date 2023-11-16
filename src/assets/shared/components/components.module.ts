@@ -11,6 +11,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ModalsComponent } from './modals/modals.component';
 import { TablesComponent } from './tables/tables.component';
 import { ToDoComponent } from './to-do/to-do.component';
+import { FlipCardsModule } from './flip-cards/flip-cards.module';
 
 @NgModule({
   declarations: [ ],
@@ -27,7 +28,8 @@ import { ToDoComponent } from './to-do/to-do.component';
     CalendarComponent,
     ModalsComponent,
     TablesComponent,
-    ToDoComponent
+    ToDoComponent,
+    FlipCardsModule
   ],
   exports: [
     ButtonsComponent,

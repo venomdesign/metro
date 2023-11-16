@@ -1,11 +1,134 @@
 <p>test-ground works!</p>
+<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4">
 
-<vision-card
-    [cardTitle]="'Calendar'">
+<flip-card>
+    <flip-card-front>
+        <div class="card-header pt-2 mb-5 px-4">
+            <div class="card-title flex-column">
+                <div class="d-flex align-items-center">
+                    <div class="symbol symbol-40px me-2">
+                        <img src="../../../../assets/media/svg/case-management/case-management-open.svg" alt="Draft Case Icon">
+                    </div>
+                    
+                    <h4 class="text-uppercase">CINA Assessment<br>
+                    <span class="fw-normal fs-6 text-gray-700">Case ID: <a href="../../case/case-details/case-details.html">YYYYMM998877</a></span></h4>
+                </div>
+            </div>
+            
+            <!--START::TOOLBAR-->
+            <div class="card-toolbar gap-4">
+                <div class="d-flex flex-column">
+                    <span class="badge badge-light fw-bold me-auto px-4 py-3">Draft</span>
+                </div>
+            
+                <div class="d-flex flex-column">
+                    <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary show menu-dropdown" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true" title="Quick Action Menu">
+                        <i class="bi bi-three-dots fs-3"></i>
+                    </button>
+                    <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
+                        <div class="menu-item px-3">
+                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_share_case">Share Case</a>
+                        </div>
+                        
+                        <div class="menu-item px-3">
+                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_assign_worker">Assign Worker</a>
+                        </div>
+                        
+                        <div class="menu-item px-3">
+                            <a href="#" class="menu-link px-3" data-bs-toggle="modal" data-bs-target="#kt_modal_cancel_case">Cancel Case</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END::TOOLBAR-->
+        </div>
+        <div class="card-body pt-0 pb-0 px-3">
+															
+            <div class="d-flex justify-content-between gap-3 pb-0">
+                <div class="px-2">
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1 mb-2">Children</div>
+                    
+                    <div class="d-flex flex-stack pt-0">
+                        <div class="d-flex flex-start me-2">
+                            <div class="d-flex flex-column">
+                                <div class="col mb-1 mx-0">
+                                    <div class="pt-sans-narrow fs-7 lh-1">
+                                        <a class="text-hover-primary" href="../../person/person-details/person-details.html" target="_blank">Haddie Braverman 17</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-stack pt-0">
+                        <div class="d-flex flex-start me-2">
+                            <div class="d-flex flex-column">
+                                <div class="col mb-1 mx-0">
+                                    <div class="pt-sans-narrow fs-7 lh-1">
+                                        <a class="text-hover-primary" href="../../person/person-details/person-details.html" target="_blank">Max Braverman 10</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-stack pt-0">
+                        <div class="d-flex flex-start me-2">
+                            <div class="d-flex flex-column">
+                                <div class="col mb-1 mx-0">
+                                    <div class="pt-sans-narrow fs-7 lh-1">
+                                        <a class="text-hover-primary" href="../../person/person-details/person-details.html" target="_blank">Nora Braverman 4</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="px-2 pt-0">
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Incident Number</div>
+                    <div class="fs-7 lh-2 pb-2"><a class="text-hover-primary" href="#">876345321SAF</a></div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Residence County</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2">Tama</div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Due Date</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2">07/25/2023</div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Date Sent for SWCM Approval</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2">07/25/2023</div>
+                </div>
+                
+                <div class="px-2 pt-0">
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">CPW</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2"><a class="text-hover-primary" href="mailto:jwilson5@dhs.state.ia.us">Josh Wilson</a></div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Assigned SWCM</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2"><a class="text-hover-primary" href="#">&nbsp;</a></div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Transfer Submitted<br>to Supervisor</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2">&nbsp;</div>
+                    
+                    <div class="fs-7 fw-bold text-gray-900 text-uppercase lh-1">Shared With</div>
+                    <div class="text-gray-700 fs-7 lh-2 pb-2">
+                        <div class="lh-1 mt-1"><a class="text-hover-primary" href="#">&nbsp;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </flip-card-front>
+    <flip-card-back>
+        <h2>This is card back</h2>
+    </flip-card-back>
+</flip-card>
+<div></div>
+<div></div>
+</div>
+  
+<vision-card [cardTitle]="'Calendar'">
     <vision-calendar></vision-calendar>
     <vision-button
         [label]="'Button'"
-        [size]="'sm'"
-    >
+        [size]="'sm'">
     </vision-button>
 </vision-card>
