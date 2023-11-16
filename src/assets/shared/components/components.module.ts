@@ -12,6 +12,7 @@ import { ModalsComponent } from './modals/modals.component';
 import { TablesComponent } from './tables/tables.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { FlipCardsModule } from './flip-cards/flip-cards.module';
+import { AccordionModule } from './accordion/accordion.module';
 
 @NgModule({
   declarations: [ ],
@@ -29,7 +30,8 @@ import { FlipCardsModule } from './flip-cards/flip-cards.module';
     ModalsComponent,
     TablesComponent,
     ToDoComponent,
-    FlipCardsModule
+    FlipCardsModule,
+    AccordionModule
   ],
   exports: [
     ButtonsComponent,
