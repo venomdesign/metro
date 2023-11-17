@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accordion',
+  selector: 'accordion',
   template: `
-    <div> <ng-content select="app-accordion-item"></ng-content></div>
+    <div class="accordion-item"><ng-content select="accordion-item"></ng-content></div>
   `,
   styleUrls: ['./accordion.component.scss']
 })

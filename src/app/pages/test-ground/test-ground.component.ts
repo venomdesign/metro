@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { PageInfoService, PageLink } from 'src/app/_metronic/layout/core/page-info.service';
 
 @Component({
@@ -6,11 +7,19 @@ import { PageInfoService, PageLink } from 'src/app/_metronic/layout/core/page-in
   templateUrl: './test-ground.component.html',
   styleUrls: ['./test-ground.component.scss']
 })
-export class TestGroundComponent implements OnInit {
+export class TestGroundComponent {
+
+  formGroup = new FormGroup({
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+  })
 
   constructor(private pageInfo: PageInfoService) {
     pageInfo.updateTitle('Testing Ground');
     pageInfo.updateBreadcrumbs(this.links);
+
+    this.formGroup.valueChanges.subscribe((val) => console.log(this.formGroup));
   }
   /* Breadcrumbs Override, need to decouple from sidemenu */
   links: Array<PageLink> = [{
@@ -19,8 +28,5 @@ export class TestGroundComponent implements OnInit {
     isActive: false,
   }];
 
-
-  ngOnInit(): void {
-  }
 
 }

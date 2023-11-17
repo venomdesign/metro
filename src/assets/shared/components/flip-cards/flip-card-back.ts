@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
     <ng-content></ng-content>
   </div>
   `,
-  styleUrls: ['./flip-cards.component.css']
+  styleUrls: ['./flip-cards.component.scss']
 })
 export class FlipCardBackComponent { }

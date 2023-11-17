@@ -1,13 +1,12 @@
-<div class="acc-header" (click)="toggle()">
-    <div class="headerTitle">
-        <svg class="text-success" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.762 0-5 2.239-5 5v14c0 2.761 2.238 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-8.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/></svg>
-        {{title}}
-    </div>
+<div class="d-flex justify-content-between" (click)="toggle()">
+    <h2 class="accordion-header pt-sans-bold">
+        <div class="symbol symbol-30px me-1">
+            <img class="symbol symbol-30px me-1" src="../../../../assets/media/svg/case-management/checkbox-icon.svg" alt="To-Do Icon">
+        </div> 
+        {{title}}&nbsp;&nbsp;<span class="badge badge-danger badge-lg">Not Completed</span>
+    </h2>
     <div [@rotatedState]="!showBody? 'default': 'rotated'" class="arrow"><i class="ion-ios-arrow-down"></i></div>
 </div>
 <div [@smoothCollapse]="!showBody? 'initial': 'final'">
-    <div class="acc-body">
-        <ng-content></ng-content>
-    </div>
+    <ng-content></ng-content>
 </div>
-

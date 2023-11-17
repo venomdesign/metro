@@ -6,6 +6,7 @@ import { ModalsModule, WidgetsModule } from '../../_metronic/partials';
 import { ComponentsModule } from 'src/assets/shared/components/components.module';
 import { FlipCardsModule } from 'src/assets/shared/components/flip-cards/flip-cards.module';
 import { AccordionModule } from 'src/assets/shared/components/accordion/accordion.module';
+import { InputModule } from 'src/assets/shared/components/input/input.module';
 @NgModule({
     declarations: [TestGroundComponent],
     imports: [
@@ -20,7 +21,8 @@ import { AccordionModule } from 'src/assets/shared/components/accordion/accordio
         ModalsModule,
         ComponentsModule,
         FlipCardsModule,
-        AccordionModule
+        AccordionModule,
+        InputModule
     ]
 })
 export class TestGroundModule {}
