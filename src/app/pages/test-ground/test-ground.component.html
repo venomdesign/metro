@@ -143,6 +143,14 @@
     </app-input>
 </vision-card>
 
+<div class="chip-container">
+    <app-chips
+        [(ngModel)]="items"
+        [removeable]="true"
+    >
+</app-chips>
+</div>
+
 <accordion class="accordion">
     <accordion-item title="To-Do List">
         <div class="card-header">
@@ -247,7 +255,6 @@
         </div>
 
         <div class="accordion-body pt-0 pt-sans scroll h-400px">
-            
             <div class="table-responsive">
                 <table class="table align-middle gs-0 gy-4">
                     <thead>
@@ -258,34 +265,27 @@
                             <th class="p-0 min-w-60px" title="To-Do List Progress"></th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-success"></span></td>
-
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-success form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" checked="checked" data-kt-element="checkbox">
                                 </div>
                             </td>
-
                             <td>
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Adoption/TPR Adoption Packet</a>
                                 <span class="text-gray-700 fw-bold d-block">DUE 04/30/2023</span>
                             </td>
-
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-success">Done</span></td>
                         </tr>
-
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-danger"></span></td>
-                            
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td class="bg-light-danger rounded">
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Case Notes Documentation</a>
                                 <span class="text-danger fw-bold d-block"><i class="bi bi-exclamation-octagon-fill text-danger"></i>
@@ -294,75 +294,58 @@
                             
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-danger">Pending</span></td>
                         </tr>
-
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-success"></span></td>
-                            
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-success form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" checked="checked" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td>
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Case Plan (Auto Generated)</a>
                                 <span class="text-gray-700 fw-bold d-block">DUE 04/30/2023</span>
                             </td>
-                            
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-success">Done</span></td>
                         </tr>
-                        
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-success"></span></td>
-                            
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-success form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" checked="checked" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td>
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Comprehensive Case Plan</a>
                                 <span class="text-gray-700 fw-bold d-block">DUE 04/30/2023</span>
                             </td>
-                            
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-success">Done</span></td>
                         </tr>
-
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-danger"></span></td>
-                            
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td class="bg-light-warning rounded">
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Complete 3055s</a>
                                 <span class="text-gray-700 fw-bold d-block"><i class="bi bi-cone-striped text-warning"></i>&nbsp;Due in 10 Days</span>
                             </td>
-                            
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-danger">Pending</span></td>
                         </tr>
-                        
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-danger"></span></td>
-                            
                             <td class="ps-0">
                                 <div class="form-check form-check-custom form-check-solid">
                                     <input class="form-check-input" type="checkbox" value="" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td>
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">CFSR Prep</a>
                                 <span class="text-gray-700 fw-bold d-block">DUE 04/30/2023</span>
                             </td>
-                            
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-danger">Pending</span></td>
                         </tr>
-                        
                         <tr>
                             <td><span data-kt-element="bullet" class="bullet bullet-vertical d-flex align-items-center h-40px bg-danger"></span></td>
                             
@@ -371,23 +354,16 @@
                                     <input class="form-check-input" type="checkbox" value="" data-kt-element="checkbox">
                                 </div>
                             </td>
-                            
                             <td>
                                 <a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Court Preparation Time</a>
                                 <span class="text-gray-700 fw-bold d-block">DUE 04/30/2023</span>
                             </td>
-                            
                             <td class="text-end"><span data-kt-element="status" class="badge badge-light-danger">Pending</span></td>
                         </tr>
-                        
                     </tbody>
                 </table>
             </div>
-            
-            
         </div>
-
-
     </accordion-item>
 </accordion>
 
@@ -395,6 +371,6 @@
     <vision-calendar></vision-calendar>
     <vision-button
         [label]="'Button'"
-        [size]="'sm'">
+        [btnSize]="'sm'">
     </vision-button>
 </vision-card>

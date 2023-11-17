@@ -1,4 +1,4 @@
-<div class="form-control">
+<div class="mb-3">
     <label [for]="inputId" class="form-label">{{label}}</label>
     <input [formControl]="control" type="text" [id]="inputId" class="form-control" [class.invalid]="control.invalid && control.dirty && control.touched" placeholder="{{label}}">
     <ng-container *ngIf="control.invalid && control.dirty && control.touched">

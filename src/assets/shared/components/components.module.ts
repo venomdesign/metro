@@ -8,6 +8,7 @@ import { ModalsComponent } from './modals/modals.component';
 import { TablesComponent } from './tables/tables.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { InputComponent } from './input/input.component';
+import { ChipsComponent } from './chips/chips.component';
 
 /*** Modules ***/
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -18,8 +19,10 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { FlipCardsModule } from './flip-cards/flip-cards.module';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputModule } from './input/input.module';
+import { ChipsModule } from './chips/chips.module';
 @NgModule({
-  declarations: [ ],
+  declarations: [ 
+  ],
   imports: [
     CommonModule,
     DropdownMenusModule,
@@ -36,7 +39,8 @@ import { InputModule } from './input/input.module';
     ToDoComponent,
     FlipCardsModule,
     AccordionModule,
-    InputModule
+    InputModule,
+    ChipsModule
   ],
   exports: [
     ButtonsComponent,
@@ -46,7 +50,8 @@ import { InputModule } from './input/input.module';
     ModalsComponent,
     TablesComponent,
     ToDoComponent,
-    InputComponent
+    InputComponent,
+    ChipsComponent
   ],
 })
 export class ComponentsModule {}

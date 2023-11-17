@@ -8,13 +8,13 @@ import { PageInfoService, PageLink } from 'src/app/_metronic/layout/core/page-in
   styleUrls: ['./test-ground.component.scss']
 })
 export class TestGroundComponent {
-
   formGroup = new FormGroup({
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
   })
-
+  items = ['One', 'two', 'three'];
+  
   constructor(private pageInfo: PageInfoService) {
     pageInfo.updateTitle('Testing Ground');
     pageInfo.updateBreadcrumbs(this.links);
@@ -28,5 +28,6 @@ export class TestGroundComponent {
     isActive: false,
   }];
 
+  
 
 }

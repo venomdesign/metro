@@ -7,6 +7,8 @@ import { ComponentsModule } from 'src/assets/shared/components/components.module
 import { FlipCardsModule } from 'src/assets/shared/components/flip-cards/flip-cards.module';
 import { AccordionModule } from 'src/assets/shared/components/accordion/accordion.module';
 import { InputModule } from 'src/assets/shared/components/input/input.module';
+import { ChipsModule } from 'src/assets/shared/components/chips/chips.module';
+import { FormsModule } from '@angular/forms';
 @NgModule({
     declarations: [TestGroundComponent],
     imports: [
@@ -22,7 +24,9 @@ import { InputModule } from 'src/assets/shared/components/input/input.module';
         ComponentsModule,
         FlipCardsModule,
         AccordionModule,
-        InputModule
+        InputModule,
+        ChipsModule,
+        FormsModule
     ]
 })
 export class TestGroundModule {}

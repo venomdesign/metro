@@ -1,29 +1,16 @@
-.form-control { 
-    display: flex; 
-    flex-direction: column; 
-    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
-    color: #2D2D2D!important;
-    border: 1px solid #a1a5b7;
-    box-shadow: none!important;
-    width: 100%;
-    padding: 0.775rem 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.5;
-    background-clip: padding-box;
-    appearance: none;
-    border-radius: 0.475rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+/**** NEED TO MOVE THIS TO THE INDIVIDUAL PARTIALS ****/
 
+:host {
     label { 
-        color: #000; 
         font-size: 1.1rem; 
-        padding-bottom: 0.02rem; 
         font-family: "PT Sans"; 
-        text-transform: uppercase; 
+        text-transform: uppercase !important; 
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
 
-    input.invalid, .error { border-color: rgb(143, 0, 0); color: rgb(143, 0, 0); }
+    input.invalid, .error { 
+        border-color: rgb(143, 0, 0); 
+        color: rgb(143, 0, 0); 
+    }
 }

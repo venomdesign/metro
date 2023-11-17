@@ -8,12 +8,12 @@
             </div>
             <ng-container *ngIf="showHeaderBtns">
                 <vision-button 
-                        [color]="'warning'" 
+                        [ngClass]="'btnWarning'" 
                         [label]="'Add Event'" 
                         [ariaLabel]="'Click here to Add Event'" 
                         [leftIcon]="''" 
                         [rightIcon]="''"
-                        [size]="'sm'"
+                        [btnSize]="'sm'"
                         (onClick)="buttonClicked()">
                 </vision-button>
             </ng-container>
@@ -40,7 +40,7 @@
                     [ariaLabel]="'Click here to Cancel'" 
                     [leftIcon]="''" 
                     [rightIcon]="''"
-                    [size]="'sm'"
+                    [btnSize]="'sm'"
                     (onClick)="buttonClicked()">
                 </vision-button>
                 <vision-button 
@@ -49,7 +49,7 @@
                     [ariaLabel]="'Click here to Add Person'" 
                     [leftIcon]="''" 
                     [rightIcon]="''"
-                    [size]="'sm'"
+                    [btnSize]="'sm'"
                     (onClick)="buttonClicked()">
                 </vision-button> -->
             </div>
@@ -60,16 +60,16 @@
                     [ariaLabel]="'Click here to Cancel'" 
                     [leftIcon]="''" 
                     [rightIcon]="''"
-                    [size]="'sm'"
+                    [btnSize]="'sm'"
                     (onClick)="buttonClicked()">
                 </vision-button> -->
                 <vision-button 
-                    [color]="'primary'" 
+                    [ngClass]="'btnPrimary'"
+                    [btnSize]="'sm'"
                     [label]="'Search'" 
                     [ariaLabel]="'Click here to Add Person'" 
                     [leftIcon]="''" 
                     [rightIcon]="''"
-                    [size]="'sm'"
                     (onClick)="buttonClicked()">
                 </vision-button>
             </div>
