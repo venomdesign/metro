@@ -1,8 +1,8 @@
 <div class="form-control">
-    <label [for]="inputId">{{label}}</label>
-    <input [formControl]="control" type="text" [id]="inputId" [class.invalid]="control.invalid && control.dirty && control.touched">
+    <label [for]="inputId" class="form-label">{{label}}</label>
+    <input [formControl]="control" type="text" [id]="inputId" class="form-control" [class.invalid]="control.invalid && control.dirty && control.touched" placeholder="{{label}}">
     <ng-container *ngIf="control.invalid && control.dirty && control.touched">
-        <div *ngFor="let err of control.errors | keyvalue" class="error">
+        <div *ngFor="let err of control.errors | keyvalue" class="error px-2 py-1">
             {{ errorMessages[err.key] }}
         </div>
     </ng-container>
